@@ -1,0 +1,15 @@
+# Large data files: raw data
+*.csv
+*.ome.tif
+*.xenium
+*.tiff
+*.tsv
+
+# Large data files: data outputs
+*.h5ad
+
+# Python cache
+__pycache__/
+*.pyc
+
+

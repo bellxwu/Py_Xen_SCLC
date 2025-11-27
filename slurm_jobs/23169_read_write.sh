@@ -5,8 +5,8 @@
 #SBATCH -p all
 #SBATCH -c 4
 #SBATCH -N 1
-#SBATCH --output=/cluster/home/bellwu/job_logs/23169_read_write%j.out
-#SBATCH --error=/cluster/home/bellwu/job_logs/23169_read_write%j.err
+#SBATCH --output=/cluster/home/bellwu/Py_Xenium/job_logs/23169_read_write%j.out
+#SBATCH --error=/cluster/home/bellwu/Py_Xenium/job_logs/23169_read_write%j.err
 
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xen_reader

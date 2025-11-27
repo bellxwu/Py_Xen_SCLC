@@ -11,4 +11,4 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xen_reader
 
-python /Users/bellwu/Py_programming/Py_Xen_SCLC/analyses/02_xen_qc/scripts/xenium_zarr.py
+python -u /cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/scripts

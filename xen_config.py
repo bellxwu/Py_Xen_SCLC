@@ -16,7 +16,8 @@ base_dir = Path(__file__).resolve().parent
 data_dir = Path("/cluster/home/lokgroup/Xenium_runs")
 xen_1 = data_dir / "20241212__190528__Lok_Jalal_241210"
 xen_2 = data_dir / "20250328__182124__Lok_Jalal_250324"
-# samples
+
+# ---- Samples ----
 # from first directory
 dir_23169 = xen_1 / "output-XETG00082__0051610__23169__20241212__190621"
 dir_66144 = xen_1 / "output-XETG00082__0051610__66144__20241212__190621"

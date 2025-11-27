@@ -17,7 +17,16 @@ data_dir = Path("/cluster/home/lokgroup/Xenium_runs")
 xen_1 = data_dir / "20241212__190528__Lok_Jalal_241210"
 xen_2 = data_dir / "20250328__182124__Lok_Jalal_250324"
 # samples
+# from first directory
 dir_23169 = xen_1 / "output-XETG00082__0051610__23169__20241212__190621"
+dir_66144 = xen_1 / "output-XETG00082__0051610__66144__20241212__190621"
+dir_19110 = xen_1 / "output-XETG00082__0051621__19110__20241212__190621"
+dir_290442 = xen_1 / "output-XETG00082__0051621__290442__20241212__190621"
+# from second directory
+dir_4462962 = xen_2 / "output-XETG00082__0057746__4462962__20250328__182222"
+dir_64312 = xen_2 / "output-XETG00082__0057746__64312__20250328__182222"
+dir_19110T1_2 = xen_2 / "output-XETG00082__0057749__19110T1_2__20250328__182222"
+dir_290442_2 = xen_2 / "output-XETG00082__0057749__290442__20250328__182222"
 
 # -- Timestamp string --
 today_str = date.today().strftime("%Y-%m-%d")
@@ -48,6 +57,8 @@ exp_workdir.mkdir(parents=True, exist_ok=True)
 
 # ------- xen_qc directory -------
 '''
+Directory for all qc analyses. Includes initial filtering analysis for one
+sample. Also includes bulk analysis of multiple samples
 '''
 qc_scripts = qc_dir / "scripts"
 qc_figures = qc_dir / "figures"

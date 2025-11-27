@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -t 1:00
-#SBATCH --mem=32G
+#SBATCH --mem=16G
 #SBATCH -J 23169_read_write
 #SBATCH -p all
-#SBATCH -c 6
+#SBATCH -c 4
 #SBATCH -N 1
 #SBATCH --output=/cluster/home/bellwu/job_logs/23169_read_write%j.out
 #SBATCH --error=/cluster/home/bellwu/job_logs/23169_read_write%j.err

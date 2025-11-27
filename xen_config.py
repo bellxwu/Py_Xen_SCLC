@@ -13,7 +13,7 @@ from datetime import date
 base_dir = Path(__file__).resolve().parent
 
 # -- Data Directories --
-data_dir = Path("/cluster/home/lokgroup/Xenium_runs")
+data_dir = Path("/cluster/home/bellwu/lokgroup/Xenium_runs")
 xen_1 = data_dir / "20241212__190528__Lok_Jalal_241210"
 xen_2 = data_dir / "20250328__182124__Lok_Jalal_250324"
 

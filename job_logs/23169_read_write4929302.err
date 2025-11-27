@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/scripts/xenium_zarr.py", line 13, in <module>
+    import xen_config as xc
+ModuleNotFoundError: No module named 'xen_config'

@@ -37,7 +37,6 @@ sdata = si.xenium(path = dir_66144,
                   cells_as_circles=True)
 adata = sdata.tables['table']
 adata.write(xen_dir / "SCLC_66144.h5ad")
-
 # sdata.write(dir_66144 / "SCLC_23169.zarr", overwrite=True)
 # %% .h5ad for 19110
 dir_19110 = xc.dir_19110
@@ -49,8 +48,6 @@ sdata = si.xenium(path = dir_19110,
                   cells_as_circles=True)
 adata = sdata.tables['table']
 adata.write(xen_dir / "SCLC_19110.h5ad")
-
-<<<<<<< HEAD
 # sdata.write(dir_19110 / "SCLC_19110.zarr", overwrite=True)
 # %% .h5ad for 290442
 dir_290442 = xc.dir_290442
@@ -102,7 +99,3 @@ sdata = si.xenium(path = dir_290442_2,
                   cells_as_circles=True)
 adata = sdata.tables['table']
 adata.write(xen_dir / "SCLC_dir_290442_2.h5ad")
-=======
-sdata.write(dir_19110 / "SCLC_19110.zarr", overwrite=True)
-
->>>>>>> 5a775120a8f2eeb17342e411c4337a7ac15a1be4

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -t 1:00:00
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH -J 23169_read_write
 #SBATCH -p himem
 #SBATCH -c 4

@@ -12,5 +12,4 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xen_reader
 
-export PYTHONPATH=/cluster/home/bellwu/Py_Xenium:$PYTHONPATH
 python -u analyses/02_xen_qc/scripts/xenium_zarr.py

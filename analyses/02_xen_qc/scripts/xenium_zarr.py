@@ -13,21 +13,21 @@ Description: Converting xenium outputs into a .Zarr file
 from pyxenium import xen_config as xc
 import spatialdata_io as si
 
-# %% Writing .Zarr from xenium output
+# %% Writing .h5ad from xenium output
 xen_dir = xc.xen_bwu
-# %% .Zarr for 23169
-dir_23169 = xc.dir_23169
-sdata = si.xenium(path = dir_23169,
-                  cell_boundaries=True,
-                  nucleus_boundaries=True,
-                  morphology_mip=False,
-                  aligned_images=True,
-                  cells_as_circles=True)
-adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_23169.h5ad")
+# %% .h5ad for 23169
+# dir_23169 = xc.dir_23169
+# sdata = si.xenium(path = dir_23169,
+#                  cell_boundaries=True,
+#                  nucleus_boundaries=True,
+#                  morphology_mip=False,
+#                   aligned_images=True,
+#                   cells_as_circles=True)
+# adata = sdata.tables['table']
+# adata.write(xen_dir / "SCLC_23169.h5ad")
 
-sdata.write(xen_dir / "SCLC_23169.zarr", overwrite=True)
-# %% .Zarr for 66144
+# sdata.write(xen_dir / "SCLC_23169.zarr", overwrite=True)
+# %% .h5ad for 66144
 dir_66144 = xc.dir_66144
 sdata = si.xenium(path = dir_66144,
                   cell_boundaries=True,
@@ -38,8 +38,8 @@ sdata = si.xenium(path = dir_66144,
 adata = sdata.tables['table']
 adata.write(xen_dir / "SCLC_66144.h5ad")
 
-sdata.write(dir_66144 / "SCLC_23169.zarr", overwrite=True)
-# %% .Zarr 
+# sdata.write(dir_66144 / "SCLC_23169.zarr", overwrite=True)
+# %% .h5ad for 19110
 dir_19110 = xc.dir_19110
 sdata = si.xenium(path = dir_19110,
                   cell_boundaries=True,
@@ -50,4 +50,54 @@ sdata = si.xenium(path = dir_19110,
 adata = sdata.tables['table']
 adata.write(xen_dir / "SCLC_19110.h5ad")
 
-sdata.write(dir_19110 / "SCLC_19110.zarr", overwrite=True)
+# sdata.write(dir_19110 / "SCLC_19110.zarr", overwrite=True)
+# %% .h5ad for 290442
+dir_290442 = xc.dir_290442
+sdata = si.xenium(path = dir_290442,
+                  cell_boundaries=True,
+                  nucleus_boundaries=True,
+                  morphology_mip=False,
+                  aligned_images=True,
+                  cells_as_circles=True)
+adata = sdata.tables['table']
+adata.write(xen_dir / "SCLC_dir_290442.h5ad")
+# %% .h5ad for dir_4462962
+dir_4462962 = xc.dir_4462962
+sdata = si.xenium(path = dir_4462962,
+                  cell_boundaries=True,
+                  nucleus_boundaries=True,
+                  morphology_mip=False,
+                  aligned_images=True,
+                  cells_as_circles=True)
+adata = sdata.tables['table']
+adata.write(xen_dir / "SCLC_dir_4462962.h5ad")
+# %% .h5ad for dir_64312
+dir_64312 = xc.dir_64312
+sdata = si.xenium(path = dir_64312,
+                  cell_boundaries=True,
+                  nucleus_boundaries=True,
+                  morphology_mip=False,
+                  aligned_images=True,
+                  cells_as_circles=True)
+adata = sdata.tables['table']
+adata.write(xen_dir / "SCLC_dir_64312.h5ad")
+# %% .h5ad for dir_19110T1_2
+dir_19110T1_2 = xc.dir_19110T1_2
+sdata = si.xenium(path = dir_19110T1_2,
+                  cell_boundaries=True,
+                  nucleus_boundaries=True,
+                  morphology_mip=False,
+                  aligned_images=True,
+                  cells_as_circles=True)
+adata = sdata.tables['table']
+adata.write(xen_dir / "SCLC_dir_19110T1_2.h5ad")
+# %% .h5ad for dir_290442_2
+dir_290442_2 = xc.dir_290442_2
+sdata = si.xenium(path = dir_290442_2,
+                  cell_boundaries=True,
+                  nucleus_boundaries=True,
+                  morphology_mip=False,
+                  aligned_images=True,
+                  cells_as_circles=True)
+adata = sdata.tables['table']
+adata.write(xen_dir / "SCLC_dir_290442_2.h5ad")

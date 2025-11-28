@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -t 1:00:00
-#SBATCH --mem=16G
+#SBATCH --mem=32G
 #SBATCH -J 23169_read_write
-#SBATCH -p all
+#SBATCH -p himem
 #SBATCH -c 4
 #SBATCH -N 1
 #SBATCH --output=/cluster/home/bellwu/Py_Xenium/job_logs/23169_read_write%j.out

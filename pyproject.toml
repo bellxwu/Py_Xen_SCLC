@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyxenium"
+version = "0.1.0"
+description = "Xenium analysis utilities for SCLC spatial project"
+requires-python = ">=3.10"
+authors = [
+	{ name = "Bell Wu"}
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyxenium"]

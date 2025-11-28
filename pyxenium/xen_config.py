@@ -10,12 +10,18 @@ from pathlib import Path
 from datetime import date
 
 # --- Base Directory ---
-base_dir = Path(__file__).resolve().parent
+base_dir = Path(__file__).resolve().parents[1]
 
 # -- Data Directories --
-data_dir = Path("/cluster/home/bellwu/lokgroup/Xenium_runs")
-xen_1 = data_dir / "20241212__190528__Lok_Jalal_241210"
-xen_2 = data_dir / "20250328__182124__Lok_Jalal_250324"
+# Cluster data directory (within lokgroup)
+data_lokgroup = Path("/cluster/home/bellwu/lokgroup/Xenium_runs")
+xen_1 = data_lokgroup / "20241212__190528__Lok_Jalal_241210"
+xen_2 = data_lokgroup / "20250328__182124__Lok_Jalal_250324"
+
+# Personal data directory
+data_bwu = base_dir / "all_data" 
+xen_bwu = data_bwu / "xen_data"
+
 
 # ---- Samples ----
 # from first directory
@@ -53,8 +59,6 @@ exp_figures = pack_exp_dir / "figures"
 
 # Working directory: package exploration
 exp_workdir = exp_figures / today_str
-exp_workdir.mkdir(parents=True, exist_ok=True)
-
 
 # ------- xen_qc directory -------
 '''
@@ -66,7 +70,6 @@ qc_figures = qc_dir / "figures"
 
 # Working directory: qc
 qc_workdir = qc_figures / today_str
-qc_workdir.mkdir(parents=True, exist_ok=True)
 
 
 

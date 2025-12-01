@@ -58,7 +58,7 @@ sdata = si.xenium(path = dir_290442,
                   aligned_images=True,
                   cells_as_circles=True)
 adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_dir_290442.h5ad")
+adata.write(xen_dir / "SCLC_290442.h5ad")
 # %% .h5ad for dir_4462962
 dir_4462962 = xc.dir_4462962
 sdata = si.xenium(path = dir_4462962,
@@ -68,7 +68,7 @@ sdata = si.xenium(path = dir_4462962,
                   aligned_images=True,
                   cells_as_circles=True)
 adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_dir_4462962.h5ad")
+adata.write(xen_dir / "SCLC_4462962.h5ad")
 # %% .h5ad for dir_64312
 dir_64312 = xc.dir_64312
 sdata = si.xenium(path = dir_64312,
@@ -78,7 +78,7 @@ sdata = si.xenium(path = dir_64312,
                   aligned_images=True,
                   cells_as_circles=True)
 adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_dir_64312.h5ad")
+adata.write(xen_dir / "SCLC_64312.h5ad")
 # %% .h5ad for dir_19110T1_2
 dir_19110T1_2 = xc.dir_19110T1_2
 sdata = si.xenium(path = dir_19110T1_2,
@@ -88,7 +88,7 @@ sdata = si.xenium(path = dir_19110T1_2,
                   aligned_images=True,
                   cells_as_circles=True)
 adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_dir_19110T1_2.h5ad")
+adata.write(xen_dir / "SCLC_19110T1_2.h5ad")
 # %% .h5ad for dir_290442_2
 dir_290442_2 = xc.dir_290442_2
 sdata = si.xenium(path = dir_290442_2,
@@ -98,4 +98,4 @@ sdata = si.xenium(path = dir_290442_2,
                   aligned_images=True,
                   cells_as_circles=True)
 adata = sdata.tables['table']
-adata.write(xen_dir / "SCLC_dir_290442_2.h5ad")
+adata.write(xen_dir / "SCLC_290442_2.h5ad")

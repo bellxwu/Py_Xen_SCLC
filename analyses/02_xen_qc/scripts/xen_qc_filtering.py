@@ -100,5 +100,4 @@ sc.pp.filter_cells(adata, min_counts=t.quantile(.1))
 sc.pp.filter_cells(adata, min_genes=s.quantile(.1))
 adata.shape
 # %% ---- 6.0 Save filtered anndata file ----
-xen_dir = xc.xen_bwu
 adata.write(xen_dir / "SCLC_23169.zarr", overwrite=True)

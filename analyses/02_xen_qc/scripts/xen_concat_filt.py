@@ -18,7 +18,7 @@ adatas = {
     p.stem: ad.read_h5ad(p)
     for p in xen_dir.glob("*.h5ad")}
 # merge files
-adata = ad.concat(adatas.values(), label='sample')
+adata = ad.concat(adatas, label='sample')
 # %% ---- 2.0 filtering anndata ---- 
 '''
 This section describes filtering out low-quality cells from the merged anndata

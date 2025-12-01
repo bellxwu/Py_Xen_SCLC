@@ -57,4 +57,4 @@ with open(xc.qc_workdir / "Filtered_anndata.txt", "w") as f:
     f.write(f"Number of cells removed: {cell_rm}")
 
 # write new adata file
-adata.write(xen_dir / "SCLC_filtered.h5ad", overwrite=True)
+adata.write(xen_dir / "SCLC_filtered.h5ad")

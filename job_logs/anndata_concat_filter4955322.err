@@ -1,0 +1,10 @@
+/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_core/anndata.py:1898: UserWarning: Observation names are not unique. To make them unique, call `.obs_names_make_unique`.
+  utils.warn_names_duplicates("obs")
+/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_core/anndata.py:1898: UserWarning: Observation names are not unique. To make them unique, call `.obs_names_make_unique`.
+  utils.warn_names_duplicates("obs")
+/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_core/anndata.py:1898: UserWarning: Observation names are not unique. To make them unique, call `.obs_names_make_unique`.
+  utils.warn_names_duplicates("obs")
+Traceback (most recent call last):
+  File "/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/scripts/xen_concat_filt.py", line 60, in <module>
+    adata.write(xen_dir / "SCLC_filtered.h5ad", overwrite=True)
+TypeError: AnnData.write_h5ad() got an unexpected keyword argument 'overwrite'

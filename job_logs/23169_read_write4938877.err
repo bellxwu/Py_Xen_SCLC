@@ -1,0 +1,10 @@
+/cluster/home/bellwu/miniconda3/envs/xen_reader/lib/python3.11/site-packages/dask/dataframe/__init__.py:31: FutureWarning: The legacy Dask DataFrame implementation is deprecated and will be removed in a future version. Set the configuration option `dataframe.query-planning` to `True` or None to enable the new Dask Dataframe implementation and silence this warning.
+  warnings.warn(
+/cluster/home/bellwu/miniconda3/envs/xen_reader/lib/python3.11/site-packages/xarray_schema/__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/scripts/xen_qc_23169.py:18: DeprecationWarning: `cell_boundaries` is being deprecated as an argument to `xenium.xenium` in SpatialData version 0.1, switch to `cells_boundaries` instead.
+  sdata = si.xenium(path = dir_23169,
+/cluster/home/bellwu/miniconda3/envs/xen_reader/lib/python3.11/functools.py:909: ImplicitModificationWarning: Transforming to str index.
+  return dispatch(args[0].__class__)(*args, **kw)
+/cluster/home/bellwu/miniconda3/envs/xen_reader/lib/python3.11/site-packages/tifffile/tifffile.py:8852: UserWarning: <tifffile.TiffPage 0 @16> reading array from closed file
+  warnings.warn(

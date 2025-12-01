@@ -25,7 +25,7 @@ This section describes filtering out low-quality cells from the merged anndata
 file. Strategy is taken from xenium_qc_filtering.py 
 '''
 # %% ---- 2.1 preparing dataset ----
-adata.var_names_make_unique()
+adata.obs_names_make_unique()
 sc.pp.calculate_qc_metrics(adata, percent_top = (10, 20, 50, 150), 
                            inplace = True)
 # %% ---- 2.2 cell-based parameter: via min n genes per cell  ----

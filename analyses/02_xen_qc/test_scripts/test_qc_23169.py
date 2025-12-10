@@ -3,7 +3,7 @@
 """
 Created on Fri Nov 28 15:36:32 2025
 
-Description: Script to read and write .h5ad and .zarr file from SCLC sample
+Description: Test script to read and write .h5ad and .zarr file from SCLC sample
 23169. The goal having the .Zarr and .h5ad is to check non-corrupt conversion.
 
 @author: bellwu

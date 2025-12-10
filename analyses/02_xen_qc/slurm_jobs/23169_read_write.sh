@@ -12,4 +12,4 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xen_reader
 
-python -u analyses/02_xen_qc/scripts/xen_qc_23169.py
+python -u analyses/02_xen_qc/h4h_scripts/xen_qc_23169.py

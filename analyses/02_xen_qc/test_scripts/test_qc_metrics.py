@@ -3,7 +3,8 @@
 """
 Created on Mon Nov 17 13:42:47 2025
 
-Description: Loading and quality control testing of Xenium data outputs
+Description: Test script for scanpy loading and quality control functions 
+of Xenium data outputs for one sample (64312)
 
 @author: bellwu
 """

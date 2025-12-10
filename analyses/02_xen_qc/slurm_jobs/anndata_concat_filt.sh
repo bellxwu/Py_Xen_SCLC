@@ -12,4 +12,4 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xenium-env
 
-python -u analyses/02_xen_qc/scripts/xen_concat_filt.py
+python -u analyses/02_xen_qc/h4h_scripts/xen_concat_filt.py

@@ -3,7 +3,8 @@
 """
 Created on Mon Nov 24 16:21:18 2025
 
-Description: Filtering out the problematic cells identified 
+Description: Test script to filter out the problematic cells identified for one 
+sample (64312).
 
 @author: bellwu
 """

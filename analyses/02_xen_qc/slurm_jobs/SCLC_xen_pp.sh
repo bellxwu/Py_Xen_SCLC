@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -t 1:00:00
+#SBATCH -t 6:00:00
 #SBATCH --mem=64G
 #SBATCH -J SCLC_xen_pp
 #SBATCH -p himem
@@ -10,6 +10,6 @@
 #SBATCH -D /cluster/home/bellwu/Py_Xenium
 
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate xen_reader
+conda activate xenium-env
 
 python -u analyses/02_xen_qc/h4h_scripts/qc_pp_xen.py

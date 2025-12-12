@@ -36,14 +36,21 @@ sc.pp.normalize_total(adata, target_sum=1e6, inplace=True)
 sc.pp.log1p(adata)
 # %%% ---- 2.2 PCA ----
 sc.pp.pca(adata)
+print("PCA successful!")
+adata.write(xen_dir / "SCLC_PCA.h5ad")
 # %%% ---- 2.3 neighbour enrichment ----
 sc.pp.neighbors(adata)
+print("Neighbour enrichment successful")
+adata.write(xen_dir / "SCLC_neighb.h5ad")
 # %%% ---- 2.4 compute UMAP ----
 sc.tl.umap(adata)
+print("UMAP successful!")
+adata.write(xen_dir / "SCLC_umap.h5ad")
 # %%% ---- 2.5 compute leiden clusters ----
 sc.tl.leiden(adata)
+print("Leiden successful! Pre-processing complete.")
 # %% ---- 3.0 write adata ----
 '''
 Write the ad file containing all files and embedded clusters, etc. 
 '''
-adata.write(xen_dir / "SCLC_xen_pp.h5ad")
+adata.write(xen_dir / "SCLC_pp.h5ad")

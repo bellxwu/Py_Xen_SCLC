@@ -4,3 +4,8 @@ adding some noise or jitter to your data.
 
 Falling back to random initialisation!
   warn(
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/qc_pp_xen.py:44: FutureWarning: In the future, the default backend for leiden will be igraph instead of leidenalg.
+
+ To achieve the future defaults please pass: flavor="igraph" and n_iterations=2.  directed must also be False to work with igraph's implementation.
+  sc.tl.leiden(adata)
+[2025-12-11T19:05:10.048] error: *** JOB 5051239 ON node76 CANCELLED AT 2025-12-11T19:05:10 DUE TO TIME LIMIT ***

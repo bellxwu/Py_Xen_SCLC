@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/qc_pp_umap_leid.py", line 20, in <module>
+    adata = ad.read_h5ad(h5ad_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/h5ad.py", line 252, in read_h5ad
+    adata = read_dispatched(f, callback=callback)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/experimental/_dispatch_io.py", line 46, in read_dispatched
+    return reader.read_elem(elem)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/utils.py", line 209, in func_wrapper
+    re_raise_error(e, elem, elem.name, "read")
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/utils.py", line 180, in re_raise_error
+    raise e
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/utils.py", line 207, in func_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/specs/registry.py", line 245, in read_elem
+    type(elem), get_spec(elem), frozenset(modifiers)
+                ^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/specs/registry.py", line 209, in get_spec
+    {
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/_io/specs/registry.py", line 210, in <dictcomp>
+    k: _read_attr(elem.attrs, k, "")
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/functools.py", line 909, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/anndata/compat/__init__.py", line 168, in _read_attr_hdf5
+    attr = attrs[name]
+           ~~~~~^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/cluster/home/bellwu/miniconda3/envs/xenium-env/lib/python3.11/site-packages/h5py/_hl/attrs.py", line 77, in __getitem__
+    attr.read(arr, mtype=htype)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5a.pyx", line 364, in h5py.h5a.AttrID.read
+  File "h5py/_proxy.pyx", line 65, in h5py._proxy.attr_rw
+OSError: Can't synchronously read data (len not positive after adjustment for EOA)
+Error raised while reading key '/' of <class 'h5py._hl.files.File'> to /

@@ -16,7 +16,7 @@ import time
 # %% ---- 1.1 Load files ----
 ## continue after neighbour analysis
 xen_dir = xc.xen_bwu
-h5ad_path = xen_dir / "SCLC_neighb.h5ad"
+h5ad_path = xen_dir / "SCLC_PCA.h5ad"
 adata = ad.read_h5ad(h5ad_path)
 # %% ---- 2.0 Preprocessing ----
 '''
@@ -48,14 +48,15 @@ end = time.perf_counter()
 # end = time.perf_counter()
 # print(f"Total run time {end - start}")
 # %%% ---- 2.3 neighbour enrichment ----
-# ## start time
-# start = time.perf_counter()
-# ## NN analysis
-# sc.pp.neighbors(adata)
-# print("Neighbour enrichment successful")
-# adata.write(xen_dir / "SCLC_neighb.h5ad")
-# end = time.perf_counter()
-# print(f"Total run time {end - start}")
+## start time
+start = time.perf_counter()
+## NN analysis
+sc.pp.neighbors(adata)
+print("Neighbour enrichment successful")
+adata.write(xen_dir / "SCLC_neighb.h5ad")
+print("Neighbour write successful")
+end = time.perf_counter()
+print(f"Total run time {end - start}")
 # %%% ---- 2.4 compute UMAP ----
 ## start time
 start = time.perf_counter()
@@ -63,6 +64,7 @@ start = time.perf_counter()
 sc.tl.umap(adata)
 print("UMAP successful!")
 adata.write(xen_dir / "SCLC_umap.h5ad")
+print("UMAP write successful")
 end = time.perf_counter()
 print(f"Total run time {end - start}")
 # %%% ---- 2.5 compute leiden clusters ----

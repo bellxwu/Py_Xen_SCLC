@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH -t 6:00:00
+#SBATCH -t 12:00:00
 #SBATCH --mem=64G
 #SBATCH -J SCLC_xen_pp
 #SBATCH -p himem
-#SBATCH -c 4
+#SBATCH -c 8
 #SBATCH -N 1
 #SBATCH --output=/cluster/home/bellwu/Py_Xenium/job_logs/SCLC_xen_pp%j.out
 #SBATCH --error=/cluster/home/bellwu/Py_Xenium/job_logs/SCLC_xen_pp%j.err

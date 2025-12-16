@@ -60,7 +60,7 @@ end = time.perf_counter()
 # %%% ---- 2.4 compute UMAP ----
 ## start time
 start = time.perf_counter()
-## UMPAP analysis
+## UMAP analysis
 sc.tl.umap(adata)
 print("UMAP successful!")
 adata.write(xen_dir / "SCLC_umap.h5ad")

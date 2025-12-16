@@ -15,7 +15,7 @@ import time
 # %% ---- 1.1 Load files ----
 ## continue after neighbour analysis
 xen_dir = xc.xen_bwu
-h5ad_path = xen_dir / "SCLC_neighb.h5ad"
+h5ad_path = xen_dir / "SCLC_umap.h5ad"
 adata = ad.read_h5ad(h5ad_path)
 # %% ---- 2.0 Leiden clustering ----
 '''

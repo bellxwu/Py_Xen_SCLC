@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -t 8:00:00
-#SBATCH --mem=96G
+#SBATCH --mem=64G
 #SBATCH -J qc_pp_leid
 #SBATCH -p himem
 #SBATCH -c 8

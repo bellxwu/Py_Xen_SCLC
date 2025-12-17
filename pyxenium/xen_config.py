@@ -48,13 +48,13 @@ Overall project layout is split into main analyses.
 analyses_dir = base_dir / "analyses" # base directory for all results
 pack_exp_dir = analyses_dir / "01_package_exploration" # subanalysis exploring packages
 qc_dir = analyses_dir / "02_xen_qc"
+annot_dir = analyses_dir / "03_xen_annot"
 
 # ------- package_exploration directory -------
 '''
 Directory here contains scripts and results of exploring the packages used in
 scverse that is needed for xenium analyses
 '''
-exp_scripts = pack_exp_dir / "scripts" # scripts for subanalysis
 exp_figures = pack_exp_dir / "figures"
 
 # Working directory: package exploration
@@ -65,13 +65,19 @@ exp_workdir = exp_figures / today_str
 Directory for all qc analyses. Includes initial filtering analysis for one
 sample. Also includes bulk analysis of multiple samples
 '''
-qc_scripts = qc_dir / "scripts"
 qc_figures = qc_dir / "figures"
 
 # Working directory: qc
 qc_workdir = qc_figures / today_str
 
+# ------- xen_qc directory -------
+'''
+Directory for all clustering and annotation analyses
+'''
+annot_figures = annot_dir / "figures"
 
+# Working directory: qc
+annot_workdir = annot_figures / today_str
 
 
 

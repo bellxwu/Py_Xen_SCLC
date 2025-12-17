@@ -9,8 +9,8 @@
 *.h5ad
 *.zarr/
 
-# Python cache
+# Python and other cache
 __pycache__/
 *.pyc
-
+*.DS_Store
 

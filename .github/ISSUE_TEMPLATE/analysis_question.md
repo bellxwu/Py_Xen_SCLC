@@ -1,6 +1,8 @@
 ---
+Name: Analysis Question
 Title: "Analysis Question"
-Description: "A question or hypothesis to explore in future analyses"
+About: "A question or hypothesis to explore in future analyses"
+Labels: ["Analysis"]
 ---
 
 ### 1. **Research Question**

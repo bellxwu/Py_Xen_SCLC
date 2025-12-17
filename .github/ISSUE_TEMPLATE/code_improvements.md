@@ -1,8 +1,8 @@
 ---
-Name: Code Improvement
-Title: "Code Improvement"
-About: "What are some issues encountered running scripts and how to optimize?"
-Labels: ['improvement']
+name: Code Improvement
+title: "Code Improvement"
+about: "What are some issues encountered running scripts and how to optimize?"
+labels: ['improvement']
 ---
 
 ### 1. **Script issue**

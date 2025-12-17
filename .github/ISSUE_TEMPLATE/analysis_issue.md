@@ -10,4 +10,4 @@ assignees: []
 
 ### Context
 
-### Next stpes
+### Next steps

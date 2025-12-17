@@ -10,9 +10,6 @@ What is an issue that was faced?
 
 > Example: *Script timeout before completion*
 
----
-
 ### 2. **Suggested improvements**
 How can the issue be fixed?
 
----

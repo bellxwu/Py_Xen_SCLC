@@ -52,7 +52,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     # PCA across samples
     StartTime = time.perf_counter()
     sc.pp.pca(SampleAnnData,
-              n_comps=(SampleAnnData.shape[0]-1)) # compute all PCs
+              n_comps=(min(SampleAnnData.shape)-1)) # compute all PCs
     EndTime = time.perf_counter()
     print(f"\nPCA of {SampleName} successful, total time {EndTime - StartTime}")
     print(f"Number of PCs computed {SampleAnnData.obsm['X_pca'].shape[1]}")

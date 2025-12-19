@@ -39,6 +39,7 @@ test_groups = {k: ad.AnnData(v) for k, v in test_groups.items()}
 ## counter
 start = time.perf_counter()
 end = time.perf_counter()
+min(c1.shape)-1
 # %% for loop
 for k, v in test_groups.items():
     # for PCA
@@ -72,10 +73,9 @@ SCLC_64312 = test_groups['SCLC_64312']
 SCLC_64312.uns
 print(f"\nTotal PCA run time for {SCLC_64312} is {end - start}")
 print("test")
-# %% 
+# %% check how many pcs for actual
 
-
-
+ZYX
 
 
 

@@ -1,0 +1,5 @@
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/qc_pp_umap_leid.py:74: FutureWarning: In the future, the default backend for leiden will be igraph instead of leidenalg.
+
+ To achieve the future defaults please pass: flavor="igraph" and n_iterations=2.  directed must also be False to work with igraph's implementation.
+  sc.tl.leiden(adata)
+[2025-12-15T18:38:53.033] error: *** JOB 5091829 ON node61 CANCELLED AT 2025-12-15T18:38:53 DUE TO TIME LIMIT ***

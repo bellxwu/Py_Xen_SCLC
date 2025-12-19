@@ -42,6 +42,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     For looop for running the SCLC xenium samples. Input is given as a 
     dictionary with SampleName as the key and SampleAnnData as its values.
     '''
+    InitialStart = time.perf_counter()
     # initial normalization
     print(f"Starting analysis of {SampleName}")
     if "counts" not in SampleAnnData.layers:
@@ -55,7 +56,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
               n_comps=(min(SampleAnnData.shape)-1)) # compute all PCs
     EndTime = time.perf_counter()
     print(f"\nPCA of {SampleName} successful, total time {EndTime - StartTime}")
-    print(f"Number of PCs computed {SampleAnnData.obsm['X_pca'].shape[1]}")
+    print(f"Number of PCs computed {SampleAnnData.obsm['X_pca'].shape}")
     # write pca .h5ad
     StartTime = time.perf_counter()
     SampleAnnData.write(f"{SampleName}_pp.h5ad")
@@ -65,7 +66,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     # neighbors analysis across samples
     StartTime = time.perf_counter()
     sc.pp.neighbors(SampleAnnData,
-                    n_pcs=SampleAnnData.obs['X_pca'].shape[1],
+                    n_pcs=SampleAnnData.obsm['X_pca'].shape[1],
                     n_neighbors=16)
     EndTime = time.perf_counter()
     print(f"\nNeigbors of {SampleName} successful, total time {EndTime - StartTime}")
@@ -99,9 +100,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     SampleAnnData.write(f"{SampleName}_pp.h5ad")
     EndTime = time.perf_counter()
     print(f"Writing .h5ad of {SampleName} successful, total time {EndTime - StartTime}")
-    
-
-# %%
+    print(f"\n Total time taken to process sample {EndTime - InitialStart}")
 
 
 

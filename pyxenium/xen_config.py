@@ -14,17 +14,20 @@ base_dir = Path(__file__).resolve().parents[1]
 
 # -- Data Directories --
 # Cluster data directory (within lokgroup)
+# xenium raw data on cluster
 xen_data_lokgroup = Path("/cluster/home/bellwu/lokgroup/Xenium_runs")
 xen_1 = xen_data_lokgroup / "20241212__190528__Lok_Jalal_241210"
 xen_2 = xen_data_lokgroup / "20250328__182124__Lok_Jalal_250324"
-
+# xenium personal data on cluster
 lokgroup_bellwu = Path("/cluster/home/bellwu/lokgroup/bellwu/")
 bell_xen = lokgroup_bellwu / "xen_data"
 bell_concat = lokgroup_bellwu / "SCLC_concat"
+bell_pp = lokgroup_bellwu / "SCLC_preprocessed"
 
 # Personal data directory
 data_bwu = base_dir / "all_data" 
 xen_bwu = data_bwu / "xen_data"
+test_bwu = data_bwu / "test_files"
 
 
 # ---- Samples ----

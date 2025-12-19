@@ -27,7 +27,7 @@ def mp_dist(T, N, pts, var=1.0):
         eMax (float): lambda+ bulk edge
         pdf (pd.Series): MP density values indexed by eigenvalue grid
     '''
-emb    q = T / N
+    q = T / N
 
     eMin = var * (1 - np.sqrt(q))**2
     eMax = var * (1 + np.sqrt(q))**2

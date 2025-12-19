@@ -11,8 +11,6 @@ for preprocessed SCLC samples.
 # %% ---- 1.0 set up local environment ----
 import scanpy as sc
 from pyxenium import xen_config as xc
-import os
-import pathlib
 
 xen_dir = xc.xen_bwu
 pp_path = xen_dir / "SCLC_pp.h5ad"
@@ -22,9 +20,13 @@ SCLC_Preprocessed_Xen = sc.read(pp_path)
 Goal here is to familiarize myself with the xenium outputs. 
 '''
 SCLC_Preprocessed_Xen.shape
+## after PCA
+SCLC_Preprocessed_Xen.uns['pca']['variance'].shape
+SCLC_Preprocessed_Xen.obsm['X_pca'].shape
 ## after neighbor
 SCLC_Preprocessed_Xen.obsp['distances'].shape
 SCLC_Preprocessed_Xen.obsp['connectivities'].shape
+SCLC_Preprocessed_Xen.uns['neighbors']
 ## after UMAP
 SCLC_Preprocessed_Xen.obsm['X_umap'].shape
 ## after leiden

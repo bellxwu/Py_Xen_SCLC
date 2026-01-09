@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -t 10:00:00
-#SBATCH --mem=64G
+#SBATCH --mem=256G
 #SBATCH -J single_pp_indiv_samples
-#SBATCH -p himem
+#SBATCH -p veryhimem
 #SBATCH -c 8
 #SBATCH -N 1
 #SBATCH --output=/cluster/home/bellwu/Py_Xenium/job_logs/single_pp_indiv_samples%j.out

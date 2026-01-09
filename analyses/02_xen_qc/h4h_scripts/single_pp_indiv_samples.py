@@ -140,19 +140,3 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     gc.collect()
     PostDeleteMem = Proc.memory_info().rss
     print(f"\nMemory freed after deleting {SampleAnnData} = {BytesToHuman(PreDeleteMem - PostDeleteMem)}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -t 4:00:00
-#SBATCH --mem=200G
+#SBATCH --mem=150G
 #SBATCH -J single_pp_indiv_samples
 #SBATCH -p veryhimem
 #SBATCH -c 8

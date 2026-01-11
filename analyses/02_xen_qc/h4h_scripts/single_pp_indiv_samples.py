@@ -38,9 +38,10 @@ SCLC_samples = {i: SCLC_xen[sample_masks.get(i)] for i in SCLC_sample_names}
 '''
 Code block to remove samples already pre-processed. To remove samples with same
 name. 
-1) Successful: SCLC_4462962
+1) Successful: SCLC_19110T1_2
+
 '''
-del SCLC_samples['SCLC_4462962']
+del SCLC_samples['SCLC_19110T1_2']
 # %% ---- 4.0 Sample preprocessing setup ----
 '''
 Preprocessing done iteratively through all SCLC samples
@@ -83,7 +84,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     # PCA across samples
     StartTime = time.perf_counter()
     sc.pp.pca(SampleAnnData,
-              n_comps=(min(SampleAnnData.shape)-1)) # compute all PCs
+              n_comps=50) # compute all PCs
     EndTime = time.perf_counter()
     print(f"\nPCA of {SampleName} successful, total time {EndTime - StartTime}")
     print(f"Number of PCs computed {SampleAnnData.obsm['X_pca'].shape}")
@@ -125,6 +126,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
                  directed=False)
     EndTime = time.perf_counter()
     print(f"\nLeiden of {SampleName} successful, total time {EndTime - StartTime}")
+    
     # write final .h5ad
     StartTime = time.perf_counter()
     SampleAnnData.write(preprocessed_dir / f"{SampleName}_pp.h5ad")
@@ -139,4 +141,4 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     del SampleAnnData
     gc.collect()
     PostDeleteMem = Proc.memory_info().rss
-    print(f"\nMemory freed after deleting {SampleAnnData} = {BytesToHuman(PreDeleteMem - PostDeleteMem)}")
+    print(f"\nMemory freed after deleting: {BytesToHuman(PreDeleteMem - PostDeleteMem)}")

@@ -1,0 +1,10 @@
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:80: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:80: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:80: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:80: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:80: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()

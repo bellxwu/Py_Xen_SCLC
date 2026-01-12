@@ -1,0 +1,7 @@
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:79: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+Traceback (most recent call last):
+  File "/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py", line 142, in <module>
+    print(f"\nMemory freed after deleting {SampleAnnData} = {BytesToHuman(PreDeleteMem - PostDeleteMem)}")
+                                           ^^^^^^^^^^^^^
+NameError: name 'SampleAnnData' is not defined

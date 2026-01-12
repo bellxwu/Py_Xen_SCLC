@@ -1,0 +1,6 @@
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:49: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/cluster/home/bellwu/Py_Xenium/analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py:49: ImplicitModificationWarning: Setting element `.layers['counts']` of view, initializing view as actual.
+  SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
+/var/spool/slurmd/job5140811/slurm_script: line 15: 2675433 Killed                  python -u analyses/02_xen_qc/h4h_scripts/single_pp_indiv_samples.py
+[2025-12-19T15:02:37.857] error: Detected 1 oom_kill event in StepId=5140811.batch. Some of the step tasks have been OOM Killed.

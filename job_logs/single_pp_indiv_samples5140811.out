@@ -1,0 +1,21 @@
+Starting analysis of SCLC_4462962
+
+PCA of SCLC_4462962 successful, total time 3398.2115966212004
+Number of PCs computed (196687, 5000)
+Writing .h5ad of SCLC_4462962 successful, total time 58.314398001879454
+
+Neigbors of SCLC_4462962 successful, total time 1476.4725809171796
+Writing .h5ad of SCLC_4462962 successful, total time 55.28061530739069
+
+UMAP of SCLC_4462962 successful, total time 335.75044248253107
+Writing .h5ad of SCLC_4462962 successful, total time 54.068885147571564
+
+Leiden of SCLC_4462962 successful, total time 26.665937604382634
+Writing .h5ad of SCLC_4462962 successful, total time 54.45247669517994
+
+Total time taken to process sample 5462.697926612571
+Starting analysis of SCLC_19110T1_2
+
+PCA of SCLC_19110T1_2 successful, total time 3376.5040461923927
+Number of PCs computed (288088, 5000)
+Writing .h5ad of SCLC_19110T1_2 successful, total time 56.86277690343559

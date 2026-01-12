@@ -1,0 +1,100 @@
+
+Starting analysis of SCLC_4462962
+
+PCA of SCLC_4462962 successful, total time 39.4022356197238
+Number of PCs computed (196687, 50)
+Writing .h5ad of SCLC_4462962 successful, total time 5.851285936310887
+
+Neigbors of SCLC_4462962 successful, total time 73.76662021875381
+Writing .h5ad of SCLC_4462962 successful, total time 6.800202459096909
+
+UMAP of SCLC_4462962 successful, total time 301.1642536018044
+Writing .h5ad of SCLC_4462962 successful, total time 6.786764333024621
+
+Leiden of SCLC_4462962 successful, total time 20.451761681586504
+Writing .h5ad of SCLC_4462962 successful, total time 6.584789447486401
+
+ Total time taken to process sample 469.05611346662045
+Memory consumed for processing sample 2.17G
+
+Memory freed after deleting: 0B
+
+Starting analysis of SCLC_66144
+
+PCA of SCLC_66144 successful, total time 76.95571732707322
+Number of PCs computed (426602, 50)
+Writing .h5ad of SCLC_66144 successful, total time 7.403694909065962
+
+Neigbors of SCLC_66144 successful, total time 121.27186017669737
+Writing .h5ad of SCLC_66144 successful, total time 8.568566523492336
+
+UMAP of SCLC_66144 successful, total time 972.658189073205
+Writing .h5ad of SCLC_66144 successful, total time 8.672048304229975
+
+Leiden of SCLC_66144 successful, total time 89.82481233030558
+Writing .h5ad of SCLC_66144 successful, total time 8.948102131485939
+
+ Total time taken to process sample 1296.7117456551641
+Memory consumed for processing sample 3.27G
+
+Memory freed after deleting: 0B
+
+Starting analysis of SCLC_290442_2
+
+PCA of SCLC_290442_2 successful, total time 114.41056507080793
+Number of PCs computed (1046641, 50)
+Writing .h5ad of SCLC_290442_2 successful, total time 12.101640401408076
+
+Neigbors of SCLC_290442_2 successful, total time 397.3048285320401
+Writing .h5ad of SCLC_290442_2 successful, total time 13.114118671044707
+
+UMAP of SCLC_290442_2 successful, total time 2762.4340769592673
+Writing .h5ad of SCLC_290442_2 successful, total time 14.076239723712206
+
+Leiden of SCLC_290442_2 successful, total time 269.62887041270733
+Writing .h5ad of SCLC_290442_2 successful, total time 13.283189378678799
+
+ Total time taken to process sample 3600.61394353956
+Memory consumed for processing sample 8.10G
+
+Memory freed after deleting: 0B
+
+Starting analysis of SCLC_23169
+
+PCA of SCLC_23169 successful, total time 14.414807023480535
+Number of PCs computed (92101, 50)
+Writing .h5ad of SCLC_23169 successful, total time 1.9770669918507338
+
+Neigbors of SCLC_23169 successful, total time 16.561038941144943
+Writing .h5ad of SCLC_23169 successful, total time 2.2802623882889748
+
+UMAP of SCLC_23169 successful, total time 114.48272252269089
+Writing .h5ad of SCLC_23169 successful, total time 2.3317581117153168
+
+Leiden of SCLC_23169 successful, total time 9.047418106347322
+Writing .h5ad of SCLC_23169 successful, total time 2.1517864745110273
+
+ Total time taken to process sample 163.47018295899034
+Memory consumed for processing sample 4.90M
+
+Memory freed after deleting: 1004.00K
+
+Starting analysis of SCLC_64312
+
+PCA of SCLC_64312 successful, total time 48.05337807349861
+Number of PCs computed (252794, 50)
+Writing .h5ad of SCLC_64312 successful, total time 5.805343475192785
+
+Neigbors of SCLC_64312 successful, total time 67.13817110285163
+Writing .h5ad of SCLC_64312 successful, total time 6.284778367727995
+
+UMAP of SCLC_64312 successful, total time 467.45914886519313
+Writing .h5ad of SCLC_64312 successful, total time 6.417366066947579
+
+Leiden of SCLC_64312 successful, total time 38.5264299698174
+Writing .h5ad of SCLC_64312 successful, total time 6.397897228598595
+
+ Total time taken to process sample 646.9537333361804
+Memory consumed for processing sample 7.26M
+
+Memory freed after deleting: 0B

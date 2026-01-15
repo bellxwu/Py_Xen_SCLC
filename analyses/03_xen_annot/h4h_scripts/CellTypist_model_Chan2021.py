@@ -28,7 +28,7 @@ sc.pp.log1p(adata_Chan, layer='normalized')
 mask = adata_Chan.var['feature_name'].isin(xen_panel['gene_name'])
 adata_Chan_5k = adata_Chan[:, mask]
 ## write anndata for future use
-adata_Chan_5k.write_h5ad(xen_dir / "scChan2021_CellTypist_5k_normalized_genes.h5ad")
+adata_Chan_5k.write_h5ad(Chan_dir / "scChan2021_CellTypist_5k_normalized_genes.h5ad")
 # %% ---- 4.0 Train CellTypist model ----
 t_start = time.time()
 model_Chan_5k = celltypist.train(X=adata_Chan_5k.layers['normalized'],

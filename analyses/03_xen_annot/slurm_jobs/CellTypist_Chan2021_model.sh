@@ -12,4 +12,4 @@
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate xenium-env
 
-python -u ~/analyses/03_xen_annot/h4h_scripts/CellTypist_model_Chan2021.py
+python -u /cluster/home/bellwu/Py_Xenium/analyses/03_xen_annot/h4h_scripts/CellTypist_model_Chan2021.py

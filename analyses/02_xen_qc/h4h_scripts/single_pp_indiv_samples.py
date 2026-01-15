@@ -38,10 +38,7 @@ SCLC_samples = {i: SCLC_xen[sample_masks.get(i)] for i in SCLC_sample_names}
 '''
 Code block to remove samples already pre-processed. To remove samples with same
 name. 
-1) Successful: SCLC_19110T1_2
-
 '''
-del SCLC_samples['SCLC_19110T1_2']
 # %% ---- 4.0 Sample preprocessing setup ----
 '''
 Preprocessing done iteratively through all SCLC samples

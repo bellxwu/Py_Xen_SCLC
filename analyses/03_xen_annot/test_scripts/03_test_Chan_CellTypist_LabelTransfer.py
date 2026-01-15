@@ -27,24 +27,22 @@ mask = adata_CxG.var['feature_name'].isin(xen_panel['gene_name'])
 adata_CxG_5k = adata_CxG[:,mask]
 # %% ---- 4.0 Train CellTypist model ----
 t_start = time.time()
-model_CxG_5k = celltypist.train(adata_CxG_5k,
-                                'cell_type_fine',
+model_CxG_5k = celltypist.train(X=adata_CxG_5k.X,
+                                labels=adata_CxG_5k.obs['cell_type_fine'],
+                                genes=adata_CxG_5k.var['feature_name'],
                                 check_expression=False,
                                 n_jobs=1,
                                 max_iter=1)
 t_end = time.time()
 print(f"Time taken to train CellTypist model: {(t_end - t_start)/60} minutes")
 ## save trained model
-### create path
-model_path = Path()
-model_CxG_5k.write(Path(celltypist.models.models_path / "CellTypist_Chan2021_CxG_5k_model.pkl"))
+model_CxG_5k.write(xen_dir / "CellTypist_Chan2021_CxG_5k_model.pkl")
 # %% ---- 5.0 Load in trained model and test prediction ----
 ## load model
-test = celltypist.models.Model.load()
+model_path = xen_dir / "CellTypist_Chan2021_CxG_5k_model.pkl"
 t_start = time.time()
 predictions = celltypist.annotate(adata_SCLC,
-                                  model = "Py_Xen_SCLC/xen_data/CellTypist_Chan2021_CxG_5k_model.pkl",
+                                  model = str(model_path),
                                   majority_voting=True)
 t_end = time.time()
 print(f"Time elapsed for CellTypist prediction: {(t_end - t_start)} seconds")
-# %%

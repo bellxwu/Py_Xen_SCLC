@@ -44,4 +44,3 @@ fig = sc.pl.umap(SCLC_Preprocessed_Xen,
                  show = False,
                  return_fig = True)
 fig.savefig(save_directory / "UMAP_leiden_sample.pdf", bbox_inches="tight")
-

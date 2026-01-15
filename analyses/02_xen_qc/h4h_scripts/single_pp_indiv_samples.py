@@ -78,7 +78,7 @@ for SampleName, SampleAnnData in SCLC_samples.items():
     print(f"\nStarting analysis of {SampleName}")
     if "counts" not in SampleAnnData.layers:
         SampleAnnData.layers["counts"] = SampleAnnData.X.copy()
-    sc.pp.normalize_total(SampleAnnData, target_sum=100, inplace=True)
+    sc.pp.normalize_total(SampleAnnData, target_sum=1e4, inplace=True)
     sc.pp.log1p(SampleAnnData)
     
     # PCA across samples

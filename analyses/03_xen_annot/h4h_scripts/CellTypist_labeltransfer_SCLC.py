@@ -11,6 +11,7 @@ from pyxenium import xen_config as xc
 import celltypist
 import time
 import gc
+import pickle
 # %% ---- 2.0 load SCLC Xenium data ----
 ## directory variables
 xen_dir = xc.bell_pp 
@@ -19,8 +20,13 @@ label_dir = xc.bell_label
 ## load all h5ad files in directory
 adatas = {p.stem: sc.read_h5ad(p) for p in xen_dir.glob("*.h5ad")}
 ## load model 
-model_dir = xc.xen_bwu / "CellTypist_Chan2021_CxG_5k_model.pkl"
-Chan_CellTypist_model = celltypist.models.Model.load(str(model_dir))
+model_path = xc.xen_bwu / "CellTypist_Chan2021_CxG_5k_model.pkl"
+with open(model_path, "rb") as f:
+    d = pickle.load(f)
+## convert pickle to CellTypist class    
+Chan_CellTypist_model = celltypist.models.Model(clf=d["Model"],
+                                                scaler=d["Scaler_"], 
+                                                description=d['description'])
 # %% ---- 3.0 load and run model ----
 predictions_dict = {}
 for SampleName, SampleAnnData in adatas.items():
@@ -37,5 +43,3 @@ for SampleName, SampleAnnData in adatas.items():
     prediction_adata = predictions.to_adata()
     prediction_adata.write_h5ad(label_dir / f"{SampleName}_CellTypist_labeled.h5ad")
     print(f"Finished CellTypist labeling for sample: {SampleName}\n")
-    del SampleAnnData
-    gc.collect()

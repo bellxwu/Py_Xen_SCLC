@@ -14,6 +14,7 @@ import celltypist
 import time
 from scipy.sparse import csr_matrix
 import numpy as np
+import pickle
 # %% ---- 2.0 Load in preprocessed Chan et al. data ----
 ## directory variables
 Chan_dir = xc.Chan_bwu
@@ -56,9 +57,28 @@ totals = np.array(X_exp.sum(axis=1)).ravel() # convert to np.array and then flat
 print(np.median(totals))
 # %% # load and run model
 model_path = xen_dir / "CellTypist_Chan2021_CxG_5k_model.pkl"
+Chan_CellTypist_model = celltypist.models.Model.load(str(model_path))
+Chan_CellTypist_model = celltypist.models.Model.load(str(model_path))
+
+# %% load model with pickle
+with open(model_dir, "rb") as f:
+    d = pickle.load(f)
+    
+type(Chan_CellTypist_model)
+
+ct_model = Model(
+    clf=d["classifier"],
+    features=d["features"],
+    labels=d["labels"],
+    description=d.get("description", "Custom CellTypist model"),
+    date=d.get("date", None)
+)
+
+# %% run prediction
 t_start = time.time()
-predictions = celltypist.annotate(adata_SCLC,
-                                  model = str(model_path),
+
+predictions = celltypist.annotate(adata_1e4,
+                                  model = Chan_CellTypist_model,
                                   majority_voting=False)
 t_end = time.time()
 print(f"Time elapsed for CellTypist prediction: {(t_end - t_start)} seconds")
@@ -69,3 +89,13 @@ prediction_adata = predictions.to_adata()
 # %% testing ravel
 X = csr_matrix([[1, 0], [0, 2]])
 X.toarray().ravel()
+# %% testing dictionary delete loops
+py_dict = {
+    'a': np.arange(10),
+    'b': np.arange(10,20),
+    'c': np.arange(20,30)
+    }
+
+for k, v in py_dict.items():
+    print(f"deleted {v}")
+    py_dict[k] = None

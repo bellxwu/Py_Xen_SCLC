@@ -23,6 +23,7 @@ lokgroup_bellwu = Path("/cluster/home/bellwu/lokgroup/bellwu/")
 bell_xen = lokgroup_bellwu / "xen_data"
 bell_concat = lokgroup_bellwu / "SCLC_concat"
 bell_pp = lokgroup_bellwu / "SCLC_preprocessed"
+bell_label = lokgroup_bellwu / "SCLC_labeled"
 
 # Personal data directory
 data_bwu = base_dir / "all_data" 

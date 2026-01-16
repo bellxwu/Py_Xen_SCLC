@@ -8,10 +8,8 @@ Description: Label transfer testing of SCLC Xenium data using CellTypist model t
 # %% ---- 1.0 set up local environment ----
 import scanpy as sc
 from pyxenium import xen_config as xc
-import pandas as pd
 import celltypist
 import time
-from pathlib import Path
 import gc
 # %% ---- 2.0 load SCLC Xenium data ----
 ## directory variables
@@ -22,6 +20,7 @@ label_dir = xc.bell_label
 adatas = {p.stem: sc.read_h5ad(p) for p in xen_dir.glob("*.h5ad")}
 ## load model 
 model_dir = xc.xen_bwu / "CellTypist_Chan2021_CxG_5k_model.pkl"
+Chan_CellTypist_model = celltypist.models.Model.load(str(model_dir))
 # %% ---- 3.0 load and run model ----
 predictions_dict = {}
 for SampleName, SampleAnnData in adatas.items():

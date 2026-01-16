@@ -28,7 +28,7 @@ for SampleName, SampleAnnData in adatas.items():
     print(f"Running CellTypist prediction on sample: {SampleName}")
     t_start = time.time()
     predictions = celltypist.annotate(SampleAnnData,
-                                      model = str(model_dir),
+                                      model = Chan_CellTypist_model,
                                       majority_voting=True)
     t_end = time.time()
     print(f"Time elapsed for CellTypist prediction on {SampleAnnData}: {(t_end - t_start)} seconds")

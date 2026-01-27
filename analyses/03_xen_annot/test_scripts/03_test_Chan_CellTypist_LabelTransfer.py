@@ -60,20 +60,6 @@ model_path = xen_dir / "CellTypist_Chan2021_CxG_5k_model.pkl"
 Chan_CellTypist_model = celltypist.models.Model.load(str(model_path))
 Chan_CellTypist_model = celltypist.models.Model.load(str(model_path))
 
-# %% load model with pickle
-with open(model_dir, "rb") as f:
-    d = pickle.load(f)
-    
-type(Chan_CellTypist_model)
-
-ct_model = Model(
-    clf=d["classifier"],
-    features=d["features"],
-    labels=d["labels"],
-    description=d.get("description", "Custom CellTypist model"),
-    date=d.get("date", None)
-)
-
 # %% run prediction
 t_start = time.time()
 
@@ -99,3 +85,20 @@ py_dict = {
 for k, v in py_dict.items():
     print(f"deleted {v}")
     py_dict[k] = None
+
+# %% load model with pickle
+with open(model_path, "rb") as f:
+    d = pickle.load(f)
+    
+type(d)
+d['Model']
+d['Scaler_']
+d['description']
+
+ct_model = celltypist.models.Model(
+    clf=d["Model"],
+    scaler=d["Scaler_"],
+    description=d['description']
+)
+
+type(adata_1e4.X)

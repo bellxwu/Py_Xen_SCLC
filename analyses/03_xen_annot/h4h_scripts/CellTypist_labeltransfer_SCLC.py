@@ -10,8 +10,9 @@ import scanpy as sc
 from pyxenium import xen_config as xc
 import celltypist
 import time
-import gc
 import pickle
+import scipy.sparse as sp
+import numpy as np
 # %% ---- 2.0 load SCLC Xenium data ----
 ## directory variables
 xen_dir = xc.bell_pp 
@@ -38,7 +39,7 @@ for SampleName, SampleAnnData in adatas.items():
                                       majority_voting=True)
     t_end = time.time()
     print(f"Time elapsed for CellTypist prediction on {SampleAnnData}: {(t_end - t_start)} seconds")
-    
+
     # save predictions anndata with labels 
     prediction_adata = predictions.to_adata()
     prediction_adata.write_h5ad(label_dir / f"{SampleName}_CellTypist_labeled.h5ad")

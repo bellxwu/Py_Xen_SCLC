@@ -57,6 +57,7 @@ analyses_dir = base_dir / "analyses" # base directory for all results
 pack_exp_dir = analyses_dir / "01_package_exploration" # subanalysis exploring packages
 qc_dir = analyses_dir / "02_xen_qc"
 annot_dir = analyses_dir / "03_xen_annot"
+Chan_analyses_dir = analyses_dir / "04_data_analysis" / "scChan_exploratory"
 
 # ------- package_exploration directory -------
 '''
@@ -78,14 +79,24 @@ qc_figures = qc_dir / "figures"
 # Working directory: qc
 qc_workdir = qc_figures / today_str
 
-# ------- xen_qc directory -------
+# ------- xen_annot directory -------
 '''
 Directory for all clustering and annotation analyses
 '''
 annot_figures = annot_dir / "figures"
 
-# Working directory: qc
+# Working directory: annot
 annot_workdir = annot_figures / today_str
+
+# ------- data_analysis directory -------
+'''
+Directory for all analyses
+'''
+Chan_figures = Chan_analyses_dir / "figures"
+
+# Working directory: Chan_analysis
+Chan_workdir = Chan_figures / today_str
+
 
 
 

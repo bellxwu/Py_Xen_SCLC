@@ -40,4 +40,3 @@ def mp_dist(T, N, pts, var=1.0):
     pdf = (1.0 / (2 * np.pi * var * q * eVal)) * np.sqrt(rad)
     pdf = pd.Series(pdf, index=eVal)
     return eMin, eMax, pdf
-# %%

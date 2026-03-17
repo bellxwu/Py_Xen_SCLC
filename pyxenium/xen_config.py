@@ -30,6 +30,7 @@ data_bwu = base_dir / "all_data"
 xen_bwu = data_bwu / "xen_data"
 test_bwu = data_bwu / "test_files"
 Chan_bwu = data_bwu / "Chan_data"
+csv_bwu = data_bwu / "csvs"
 
 # ---- Samples ----
 # from first directory

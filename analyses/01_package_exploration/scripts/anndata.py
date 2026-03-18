@@ -54,3 +54,11 @@ test.X[0,0]
 adata.X[0,0]
 print(adata.X[0:4, 0:4]) 
 print(test.X[0:4, 0:4])
+# %%
+# exploring the axis again
+df = pd.DataFrame(np.random.randint(0, 100, size=(10, 10)), 
+                  columns=[f'col_{i}' for i in range(10)])
+df.index = [f'cell{i}' for i in range(1,11)]
+
+# %%
+df.idxmax(axis=0) # axis of 0 looks at rows
